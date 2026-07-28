@@ -1,61 +1,108 @@
-# MERN Todo App
+# 📋 MERN Todo App
 
-A simple Todo App built with the MERN (MongoDB, Express.js, React.js, Node.js) stack.
+A full-stack Todo application built with the MERN stack (MongoDB, Express.js, React, Node.js) featuring JWT authentication, glassmorphism UI, and complete CRUD operations.
 
-## Features
+![MERN Todo App](https://img.shields.io/badge/MERN-Todo%20App-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Node.js](https://img.shields.io/badge/Node.js-v14%2B-green)
+![React](https://img.shields.io/badge/React-v18%2B-blue)
 
-- User registration and login functionality with JWT authentication.
-- Create, read, update, and delete (CRUD) operations for managing todos.
-- Protected routes that require authentication.
+---
 
-## Technologies Used
+## ✨ Features
 
-- **MongoDB**: A NoSQL database for storing user information and todos.
-- **Express.js**: A web application framework for building the server-side API.
-- **React.js**: A JavaScript library for building the user interface.
-- **Node.js**: A JavaScript runtime for executing server-side code.
-- **JWT (JSON Web Tokens)**: Used for user authentication and authorization.
-- **WebSocket** (optional): Enables real-time updates without page refresh.
+| Feature | Description |
+|---------|-------------|
+| 🔐 **Secure Authentication** | JWT-based login and registration system |
+| ✅ **Complete CRUD** | Create, Read, Update, and Delete todos |
+| 🔄 **Toggle Status** | Mark todos as complete/incomplete with one click |
+| 👤 **User-Specific** | Each user sees only their own todos |
+| 🔍 **Duplicate Prevention** | Case-insensitive check prevents duplicate todos |
+| 🎨 **Modern UI** | Glassmorphism design with smooth animations |
+| 📱 **Responsive** | Works perfectly on all devices (mobile, tablet, desktop) |
+| ⚡ **Real-time Updates** | Instant feedback on all actions |
 
-## Prerequisites
+---
 
-Before running the application, make sure you have the following software installed:
+## 🛠️ Tech Stack
 
-- [Node.js](https://nodejs.org)
-- [MongoDB](https://www.mongodb.com)
+### Backend
 
-## Getting Started
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **Node.js** | v14+ | JavaScript runtime |
+| **Express.js** | v4.x | Web framework |
+| **MongoDB** | v6.x | NoSQL database |
+| **Mongoose** | v7.x | ODM for MongoDB |
+| **JWT** | v9.x | Authentication tokens |
+| **Bcrypt** | v5.x | Password hashing |
+| **Cors** | v2.x | Cross-origin resource sharing |
+| **Dotenv** | v16.x | Environment variables |
 
-1. Clone the repository:
+### Frontend
 
-   ```bash
-   git clone https://github.com/your-username/mern-todo-app.git
-   
-2. Install dependencies:
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **React.js** | v18.x | UI library |
+| **React Router** | v6.x | Navigation |
+| **CSS3** | - | Styling with glassmorphism |
 
-   ```bash
-   cd mern-todo-app
-   npm install
+---
 
-3. Set up environment variables:
+## 📋 Prerequisites
 
- - Create a .env file in the project root directory.
- - Add the following variables to the .env file:
+Before you begin, ensure you have the following installed:
 
-   ```bash
-   MONGODB_URI=<your-mongodb-uri>
-   JWT_SECRET=<your-jwt-secret>
- 
-4. Start the development server:
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [MongoDB](https://www.mongodb.com/) (Local or Atlas)
 
-   ```bash
-   npm run dev
-   
-5. Open your web browser and access the application at http://localhost:3000.
+---
 
+## 🔧 Installation
 
-## Contributing
+### 1. Clone the Repository
 
-Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
+```bash
+git clone https://github.com/AmokSingh/To-Do-List.git
+cd To-Do-List
+2. Install Backend Dependencies
+bash
+cd server
+npm install
+3. Install Frontend Dependencies
+bash
+cd ../client
+npm install
+4. Configure Environment Variables
+Create a .env file in the server folder:
 
-    
+bash
+cd ../server
+touch .env
+Add the following to .env:
+
+env
+PORT=3001
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/database
+JWT_SECRET_KEY=your_super_secret_jwt_key_here
+FRONTEND_URL=http://localhost:3000
+Note: For MongoDB Atlas, use mongodb+srv://username:password@cluster.mongodb.net/database
+
+For local MongoDB, use mongodb://localhost:27017/todo_app
+
+5. Start the Application
+Run Backend:
+
+bash
+cd server
+npm start
+Server runs on http://localhost:3001
+
+Run Frontend (in new terminal):
+
+bash
+cd client
+npm start
+App runs on http://localhost:3000
+

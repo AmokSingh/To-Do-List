@@ -66,14 +66,17 @@ Before you begin, ensure you have the following installed:
 ```bash
 git clone https://github.com/AmokSingh/To-Do-List.git
 cd To-Do-List
+
 2. Install Backend Dependencies
 bash
 cd server
 npm install
+
 3. Install Frontend Dependencies
 bash
 cd ../client
 npm install
+
 4. Configure Environment Variables
 Create a .env file in the server folder:
 
@@ -84,12 +87,9 @@ Add the following to .env:
 
 env
 PORT=3001
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/database
+MONGODB_URI=<Your Mongodb URI>
 JWT_SECRET_KEY=your_super_secret_jwt_key_here
 FRONTEND_URL=http://localhost:3000
-Note: For MongoDB Atlas, use mongodb+srv://username:password@cluster.mongodb.net/database
-
-For local MongoDB, use mongodb://localhost:27017/todo_app
 
 5. Start the Application
 Run Backend:
@@ -98,6 +98,7 @@ bash
 cd server
 npm start
 Server runs on http://localhost:3001
+
 
 Run Frontend (in new terminal):
 
